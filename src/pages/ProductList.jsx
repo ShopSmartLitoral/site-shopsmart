@@ -4,11 +4,14 @@ import Announcement from "../components/Announcement";
 import Products from "../components/Products";
 import Footer from "../components/Footer";
 import { mobile } from "../responsive";
+import React, { useEffect } from "react"
 
-const Container = styled.div``;
+const Container = styled.div`
+`;
 
 const Title = styled.h1`
   margin: 20px;
+  margin-top: 110px;
 `;
 
 const FilterContainer = styled.div`
@@ -35,7 +38,13 @@ const Select = styled.select`
 `;
 const Option = styled.option``;
 
-const ProductList = () => {
+const ProductList = (props) => {
+
+  useEffect(() => {
+    console.log('props: ', props)
+  }, [props])
+
+
   return (
     <Container>
       <Navbar />

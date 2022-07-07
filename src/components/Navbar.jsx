@@ -118,8 +118,8 @@ const Button = styled.button`
   flex: 1;
   height: 30px;
   border: none;
-  color: white;
-  background-color: #1076D1;
+  color: #1076D1;
+  background-color: transparent;
 `;
 
 const linkStyle = {
@@ -136,7 +136,7 @@ const Navbar = () => {
         <Left>
           <Link style={linkStyle} to={'/'}>
             <MenuMobile>X</MenuMobile>
-            <Logo >ShopSmart</Logo>
+            <Logo>ShopSmart</Logo>
           </Link>
         </Left>
         <Central>
@@ -147,12 +147,24 @@ const Navbar = () => {
             </Button>
           </InputContainer>
           <Menu>
-            <MenuItem>iPhone</MenuItem>
-            <MenuItem>Xiaomi</MenuItem>
-            <MenuItem>Capinhas</MenuItem>
-            <MenuItem>Pelicolas</MenuItem>
-            <MenuItem>Notbook`s</MenuItem>
-            <MenuItem>Consoles</MenuItem>
+            <Link style={linkStyle} to={'/'}>
+              <MenuItem>iPhone</MenuItem>
+            </Link>
+            <Link style={linkStyle} to={'/'}>
+              <MenuItem>Xiaomi</MenuItem>
+            </Link>
+            <Link style={linkStyle} to={'/'}>
+              <MenuItem>Capinhas</MenuItem>
+            </Link>
+            <Link style={linkStyle} to={'/'}>
+              <MenuItem>Pelicolas</MenuItem>
+            </Link>
+            <Link style={linkStyle} to={'/'}>
+              <MenuItem>Notbook`s</MenuItem>
+            </Link>
+            <Link style={linkStyle} to={'/'}>
+              <MenuItem>Consoles</MenuItem>
+            </Link>
           </Menu>
         </Central>
         <Right>
