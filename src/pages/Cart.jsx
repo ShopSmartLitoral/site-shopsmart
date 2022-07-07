@@ -177,7 +177,7 @@ const Cart = () => {
                 <Image src="https://files.tecnoblog.net/wp-content/uploads/2021/09/iphone-13-pro-max-produto.png" />
                 <Details>
                   <ProductName>
-                    <b>Product:</b> iPhone 13 Pro Max 128Gb
+                    <b>Produto:</b> iPhone 13 Pro Max 128Gb
                   </ProductName>
                   <ProductId>
                     <b>ID:</b> 93813718293
@@ -199,7 +199,7 @@ const Cart = () => {
                 <Image src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MKUW3_VW_34FR+watch-45-alum-blue-nc-7s_VW_34FR_WF_CO?wid=1400&hei=1400&trim=1,0&fmt=p-jpg&qlt=95&.v=1632171100000,1631661591000" />
                 <Details>
                   <ProductName>
-                    <b>Product:</b> Apple Watch Series 7 45mm
+                    <b>Produto:</b> Apple Watch Series 7 45mm
                   </ProductName>
                   <ProductId>
                     <b>ID:</b> 93813718293
