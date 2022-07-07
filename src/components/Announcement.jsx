@@ -8,7 +8,7 @@ const Container = styled.div`
   height: 30px;
   background-color: #C70039;
   color: white;
-  display: ${( scroll => scroll !== 0 ? `none` : `flex`)};
+  display: ${( scroll => scroll !== 0 ? `flex` : `none`)};
   align-items: center;
   justify-content: center;
   font-size: 14px;
