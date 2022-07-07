@@ -3,6 +3,7 @@ import { ShoppingCartOutlined, Search } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import { Link } from 'react-router-dom'
 
 const Container = styled.div`
   margin-top: 30px;
@@ -12,10 +13,10 @@ const Container = styled.div`
   height: 90px;
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
-  ${mobile({ 
-    height: "80px",
-    zIndex: 10
-  })}
+  ${mobile({
+  height: "80px",
+  zIndex: 10
+})}
 `;
 
 const Wrapper = styled.div`
@@ -34,10 +35,10 @@ const Left = styled.div`
   text-align: center;
   justify-content: center;
   height: 90px;
-  ${mobile({ 
-    height: "70px",
-    marginTop: -5
-  })}
+  ${mobile({
+  height: "70px",
+  marginTop: -5
+})}
 `;
 
 const Central = styled.div`
@@ -46,9 +47,9 @@ const Central = styled.div`
   height: 90px;
   align-items: center;
   justify-content: center;
-  ${mobile({ 
-    display: 'none'
-  })}
+  ${mobile({
+  display: 'none'
+})}
 `;
 
 const Menu = styled.div`
@@ -67,23 +68,26 @@ const MenuMobile = styled.div`
   backgroundColor: '#c2c2c2'
 })}
 `
-const Logo = styled.h1`
+const Logo = styled.div`
+  margin-top: -20px;
+  font-size: 36px;
   font-weight: bold;
   ${mobile({ fontSize: "24px" })}
 `;
 const Right = styled.div`
+  margin-top: -20px;
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   height: 90px;
-  ${mobile({ 
-    flex: 1, 
-    justifyContent: "center",
-    alignItems: "center",
-    height: "70px",
-    marginTop: -5
-  })}
+  ${mobile({
+  flex: 1,
+  justifyContent: "center",
+  alignItems: "center",
+  height: "70px",
+  marginTop: -5
+})}
 `;
 
 const MenuItem = styled.div`
@@ -118,14 +122,22 @@ const Button = styled.button`
   background-color: #1076D1;
 `;
 
+const linkStyle = {
+  margin: "1rem",
+  textDecoration: "none",
+  color: 'white'
+};
+
 const Navbar = () => {
 
   return (
     <Container>
       <Wrapper>
         <Left>
-          <MenuMobile>X</MenuMobile>
-          <Logo>ShopSmart</Logo>
+          <Link style={linkStyle} to={'/'}>
+            <MenuMobile>X</MenuMobile>
+            <Logo >ShopSmart</Logo>
+          </Link>
         </Left>
         <Central>
           <InputContainer>
@@ -147,9 +159,11 @@ const Navbar = () => {
           <MenuItem>Cadastar-se</MenuItem>
           <MenuItem>Login</MenuItem>
           <MenuItem>
-            <Badge badgeContent={4} color="primary">
-              <ShoppingCartOutlined />
-            </Badge>
+            <Link style={linkStyle} to={'/cart'}>
+              <Badge badgeContent={2} color="primary">
+                <ShoppingCartOutlined />
+              </Badge>
+            </Link>
           </MenuItem>
         </Right>
       </Wrapper>
