@@ -129,7 +129,7 @@ const Navbar = () => {
         </Left>
         <Central>
           <InputContainer>
-            <Input placeholder="Pesquisar" />
+            <Input placeholder="Pesquisar ex: iPhone, Xiaomi, Apple Watch..." />
             <Button>
               <Search />
             </Button>
