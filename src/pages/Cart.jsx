@@ -148,6 +148,29 @@ const Button = styled.button`
 `;
 
 const Cart = () => {
+
+  const product = [
+    {
+      id: 987293,
+      name: 'Apple iPhone 13 Pro Max (256GB) - Azul-Sierra',
+      description: `Tela Super Retina XDR com ProMotion, para uma experiência fluida 
+                    e responsiva. Um upgrade dramático no sistema de câmera e no que 
+                    você pode fazer com ele. Design com resistência fora de série.
+                    Chip A15 Bionic ultrarrápido. E duração de bateria ainda maior. É Pro e pronto.`,
+      price: 6.499,
+      quantity: 1
+    },
+    {
+      id: 908982,
+      name: 'Apple Watch Series 7 (GPS + Cellular, 41mm) - Caixa de alumínio Azul - Pulseira esportiva azul-abissal',
+      description: `Tela Super Retina XDR com ProMotion, para uma experiência fluida 
+                    e responsiva. Um upgrade dramático no sistema de câmera e no que 
+                    você pode fazer com ele. Design com resistência fora de série.
+                    Chip A15 Bionic ultrarrápido. E duração de bateria ainda maior. É Pro e pronto.`,
+      price: 2.249,
+      quantity: 1
+    }
+  ]
   return (
     <Container>
       <Navbar />
@@ -169,20 +192,20 @@ const Cart = () => {
                 <Image src="https://files.tecnoblog.net/wp-content/uploads/2021/09/iphone-13-pro-max-produto.png" />
                 <Details>
                   <ProductName>
-                    <b>Produto:</b> iPhone 13 Pro Max 128Gb
+                    <b>Produto:</b> {product[0].name}
                   </ProductName>
                   <ProductId>
-                    <b>ID:</b> 93813718293
+                    <b>ID:</b> {product[0].id}
                   </ProductId>
                 </Details>
               </ProductDetail>
               <PriceDetail>
                 <ProductAmountContainer>
                   <Add />
-                  <ProductAmount>1</ProductAmount>
+                  <ProductAmount>{product[0].quantity}</ProductAmount>
                   <Remove />
                 </ProductAmountContainer>
-                <ProductPrice>R$ 6.499,00</ProductPrice>
+                <ProductPrice>R$ {product[0].price},00</ProductPrice>
               </PriceDetail>
             </Product>
             <Hr />
@@ -191,10 +214,10 @@ const Cart = () => {
                 <Image src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MKUW3_VW_34FR+watch-45-alum-blue-nc-7s_VW_34FR_WF_CO?wid=1400&hei=1400&trim=1,0&fmt=p-jpg&qlt=95&.v=1632171100000,1631661591000" />
                 <Details>
                   <ProductName>
-                    <b>Produto:</b> Apple Watch Series 7 45mm
+                    <b>Produto:</b> {product[1].name}
                   </ProductName>
                   <ProductId>
-                    <b>ID:</b> 93813718293
+                    <b>ID:</b> {product[1].id}
                   </ProductId>
                 </Details>
               </ProductDetail>
@@ -204,7 +227,7 @@ const Cart = () => {
                   <ProductAmount>1</ProductAmount>
                   <Remove />
                 </ProductAmountContainer>
-                <ProductPrice>R$ 2.249,00</ProductPrice>
+                <ProductPrice>R$ {product[1].price},00</ProductPrice>
               </PriceDetail>
             </Product>
           </Info>
@@ -216,11 +239,11 @@ const Cart = () => {
             </SummaryItem>
             <SummaryItem>
               <SummaryItemText>Frete</SummaryItemText>
-              <SummaryItemPrice>R$ 00,00</SummaryItemPrice>
+              <SummaryItemPrice>R$ 0,00</SummaryItemPrice>
             </SummaryItem>
             <SummaryItem>
               <SummaryItemText>Desconto</SummaryItemText>
-              <SummaryItemPrice>R$ 00,00</SummaryItemPrice>
+              <SummaryItemPrice>R$ 0,00</SummaryItemPrice>
             </SummaryItem>
             <SummaryItem type="total">
               <SummaryItemText>Total</SummaryItemText>
