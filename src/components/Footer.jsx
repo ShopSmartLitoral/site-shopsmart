@@ -3,7 +3,7 @@ import {
   Instagram,
   MailOutline,
   Phone,
-  Pinterest,
+  WhatsApp,
   Room,
   Twitter,
 } from "@material-ui/icons";
@@ -107,7 +107,7 @@ const Footer = () => {
             <Twitter />
           </SocialIcon>
           <SocialIcon color="E60023">
-            <Pinterest />
+            <WhatsApp />
           </SocialIcon>
         </SocialContainer>
       </Left>
