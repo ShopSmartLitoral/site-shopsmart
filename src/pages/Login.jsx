@@ -1,14 +1,12 @@
 import styled from "styled-components";
 import {mobile} from "../responsive";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
-    ),
-    url("https://images.pexels.com/photos/6984650/pexels-photo-6984650.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+  background: 
+    url("https://www.ideiademarketing.com.br/wp-content/uploads/2014/02/apple.png")
       center;
   background-size: cover;
   display: flex;
@@ -19,7 +17,8 @@ const Container = styled.div`
 const Wrapper = styled.div`
   width: 25%;
   padding: 20px;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
   ${mobile({ width: "75%" })}
 `;
 
@@ -50,24 +49,17 @@ const Button = styled.button`
   margin-bottom: 10px;
 `;
 
-const Link = styled.a`
-  margin: 5px 0px;
-  font-size: 12px;
-  text-decoration: underline;
-  cursor: pointer;
-`;
-
 const Login = () => {
   return (
     <Container>
       <Wrapper>
-        <Title>SIGN IN</Title>
+        <Title>Login</Title>
         <Form>
-          <Input placeholder="username" />
-          <Input placeholder="password" />
+          <Input placeholder="E-mail" />
+          <Input placeholder="Senha" />
           <Button>LOGIN</Button>
-          <Link>DO NOT YOU REMEMBER THE PASSWORD?</Link>
-          <Link>CREATE A NEW ACCOUNT</Link>
+          <Link to={'/'}>NÃO LEMBRA SUA SENHA?</Link>
+          <Link to={'/register'}>CRIAR NOVA CONTA</Link>
         </Form>
       </Wrapper>
     </Container>

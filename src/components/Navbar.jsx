@@ -168,8 +168,12 @@ const Navbar = () => {
           </Menu>
         </Central>
         <Right>
-          <MenuItem>Cadastar-se</MenuItem>
-          <MenuItem>Login</MenuItem>
+          <Link to={'/register'} style={linkStyle}>
+            <MenuItem>Cadastar-se</MenuItem>
+          </Link>
+          <Link to={'/login'} style={linkStyle}>
+            <MenuItem>Login</MenuItem>
+          </Link>
           <MenuItem>
             <Link style={linkStyle} to={'/cart'}>
               <Badge badgeContent={2} color="primary">

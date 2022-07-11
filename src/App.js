@@ -8,8 +8,8 @@ import {
 import Home from "./pages/Home";
 // import Product from "./pages/Product";
 import ProductList from "./pages/ProductList";
-// import Register from "./pages/Register";
-// import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
 import Cart from "./pages/Cart";
 import constants from './utils/constants';
 
@@ -32,6 +32,8 @@ const App = () => {
             props={constants.TYPE.XIAOMI}
             />          
           <Route path='/cart' element={<Cart />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/register' element={<Register />} />
         </Routes>
       </BrowserRouter>
     </div>

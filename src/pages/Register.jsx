@@ -1,14 +1,14 @@
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import UserService from "../service/user";
+import constants from "../utils/constants";
 
 const Container = styled.div`
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
-    ),
-    url("https://images.pexels.com/photos/6984661/pexels-photo-6984661.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+  background: 
+    url("https://www.ideiademarketing.com.br/wp-content/uploads/2014/02/apple.png")
       center;
   background-size: cover;
   display: flex;
@@ -55,22 +55,53 @@ const Button = styled.button`
 `;
 
 const Register = () => {
+  const [user, setUser] = useState(null)
+  const [warningMessage, setWarningMessage] = useState(null)
+
+  const createUser = async () => {
+
+      const verifyPass = user.password !== user.passwordCombine ? false : true
+
+      if(!verifyPass) {
+        return setWarningMessage(constants.WARNING_MESSAGE.PASS_COMBINE)
+      }
+
+      const newUser = {
+        name: user.name,
+        email: user.email,
+        password: user.password
+      }
+
+      const response = await UserService.createUser(newUser)
+
+      console.log('criou: ', response)
+
+      return response
+
+  }
+
+  useEffect(() => {
+    console.error('Error/Warning: ', warningMessage)
+  }, [warningMessage])
+
+  useEffect(() => {
+    console.log('user: ', user)
+  }, [user])
+
   return (
     <Container>
       <Wrapper>
-        <Title>CREATE AN ACCOUNT</Title>
+        <Title>CRIE SUA CONTA</Title>
         <Form>
-          <Input placeholder="name" />
-          <Input placeholder="last name" />
-          <Input placeholder="username" />
-          <Input placeholder="email" />
-          <Input placeholder="password" />
-          <Input placeholder="confirm password" />
+          <Input placeholder="name" onChange={(e) => setUser({...user, name: e.target.value})} />
+          <Input placeholder="email" onChange={(e) => setUser({...user, email: e.target.value})} />
+          <Input placeholder="password" onChange={(e) => setUser({...user, password: e.target.value})} />
+          <Input placeholder="confirm password" onChange={(e) => setUser({...user, passwordCombine: e.target.value})} />
           <Agreement>
-            By creating an account, I consent to the processing of my personal
-            data in accordance with the <b>PRIVACY POLICY</b>
+            Ao criar uma conta, concordo com o processamento dos meus dados pessoais
+             dados de acordo com o <b>POLITICA DE PRIVACIDADE</b>
           </Agreement>
-          <Button>CREATE</Button>
+          <Button onClick={createUser()}>Criar</Button>
         </Form>
       </Wrapper>
     </Container>
