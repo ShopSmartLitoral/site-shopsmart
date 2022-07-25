@@ -1,6 +1,10 @@
 {
   "name": "SiteShopSmart",
   "version": "1.0.0",
+  "author": {
+    "name": "Euclides Silva",
+    "email": "euclideslione@icloud.com"
+  },
   "private": true,
   "engines": {
     "node": "16.x"

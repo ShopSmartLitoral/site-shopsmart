@@ -121,6 +121,7 @@ const Footer = () => {
           <ListItem>SmartWatch</ListItem>
           <ListItem>Acessórios</ListItem>
           <ListItem>Meu Carrinho</ListItem>
+          <ListItem>Ajuda</ListItem>
           <ListItem>Termos de uso</ListItem>
         </List>
       </Center>

@@ -1,15 +1,15 @@
 export const sliderItems = [
   {
     id: 1,
-    img: "https://macmagazine.com.br/wp-content/uploads/2021/09/15-iphone-13.png",
+    img: "https://i.blogs.es/5091e1/captura-de-pantalla-2020-10-13-a-las-19.47.02/1366_521.jpg",
     title: "IPHONE 13 Pro Max",
     desc: "É só na ShopSmart que tem iPhone 13 Pro Max por apenas R$ 6.499,00 em até 18x",
     bg: "ffffff",
   },
   {
     id: 2,
-    img: "https://i.blogs.es/5091e1/captura-de-pantalla-2020-10-13-a-las-19.47.02/1366_521.jpg",
     title: "IPHONE 12",
+    img: "https://macmagazine.com.br/wp-content/uploads/2021/09/15-iphone-13.png",
     desc: "O melhor preço do Litoral só aqui na ShopSmart.",
     bg: "ffffff",
   },

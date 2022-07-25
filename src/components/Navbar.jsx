@@ -19,6 +19,16 @@ const Container = styled.div`
 })}
 `;
 
+const SubMenu = styled.div`
+  display: none;
+  width: 100%;
+  height: 150px;
+  background-color: #fff;
+  margin-top: -20px;
+  position: absolute;
+`;
+
+
 const Wrapper = styled.div`
   padding: 10px 20px;
   display: flex;
@@ -94,8 +104,12 @@ const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
   margin-left: 25px;
-  ${mobile({ fontSize: "12px", marginLeft: "10px" })}
+  &:hover ${SubMenu} {
+    display: flex;
+  }
+  ${mobile({ fontSize: "12px", marginLeft: "10px" })};
 `;
+
 
 const InputContainer = styled.div`
   width: 100%;
@@ -147,10 +161,10 @@ const Navbar = () => {
             </Button>
           </InputContainer>
           <Menu>
-            <Link style={linkStyle} to={'/'}>
+            <Link style={linkStyle} to={'/product/iphone'}>
               <MenuItem>iPhone</MenuItem>
             </Link>
-            <Link style={linkStyle} to={'/'}>
+            <Link style={linkStyle} to={'/product/xiaomi'}>
               <MenuItem>Xiaomi</MenuItem>
             </Link>
             <Link style={linkStyle} to={'/'}>
@@ -183,6 +197,7 @@ const Navbar = () => {
           </MenuItem>
         </Right>
       </Wrapper>
+      <SubMenu />
     </Container>
   );
 };

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Container = styled.div`
   z-index: 10;
@@ -8,7 +8,7 @@ const Container = styled.div`
   height: 30px;
   background-color: #C70039;
   color: white;
-  display: ${( scroll => scroll !== 0 ? `flex` : `none`)};
+  display: flex;
   align-items: center;
   justify-content: center;
   font-size: 14px;
@@ -19,13 +19,11 @@ const Announcement = () => {
 
   const [scroll, setScroll] = useState(0)
 
-  window.addEventListener('scroll', (event) => {
-
-    setScroll(event.srcElement.nodeType)
-    
-  })
-
-  return <Container scroll={scroll}>Frete grátis em compras acima de R$ 1.000,00!</Container>;
+  return (
+    <>
+    { scroll === 0 && <Container scroll={scroll}>Frete grátis em compras acima de R$ 1.000,00!</Container> }
+    </>
+  )
 };
 
 export default Announcement;
