@@ -161,10 +161,10 @@ const Navbar = () => {
             </Button>
           </InputContainer>
           <Menu>
-            <Link style={linkStyle} to={'/product/iphone'}>
+            <Link style={linkStyle} to={'/'}>
               <MenuItem>iPhone</MenuItem>
             </Link>
-            <Link style={linkStyle} to={'/product/xiaomi'}>
+            <Link style={linkStyle} to={'/'}>
               <MenuItem>Xiaomi</MenuItem>
             </Link>
             <Link style={linkStyle} to={'/'}>
